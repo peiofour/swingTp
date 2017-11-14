@@ -2,7 +2,6 @@ package com.ynov.tpswing;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 class MyTable extends AbstractTableModel{
 

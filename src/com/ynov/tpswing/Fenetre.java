@@ -31,8 +31,8 @@ public class Fenetre extends JFrame {
         goListPanelButton.addActionListener(new goToPanel(this, listPanel));
 
         //ListPanel
-        listPanel.add(new JButton("bla"), BorderLayout.CENTER);
-
+        listPanel.add(table, BorderLayout.CENTER);
+        listPanel.add(goListPanelButton, BorderLayout.SOUTH);
         //MenuPanel
         menuPanel.add(goAddLineButton, BorderLayout.NORTH);
         menuPanel.add(goListPanelButton, BorderLayout.CENTER);
@@ -43,7 +43,7 @@ public class Fenetre extends JFrame {
 
         addLinePanel.add(southAdd, BorderLayout.SOUTH);
 
-        this.getContentPane().add(listPanel);
+        this.getContentPane().add(menuPanel);
 
         this.setVisible(true);
     }
@@ -63,7 +63,8 @@ public class Fenetre extends JFrame {
             System.out.println("button ok");
             fenetre.getContentPane().removeAll();
             fenetre.getContentPane().add(panel);
-            fenetre.setVisible(true);
+            fenetre.invalidate();
+            fenetre.validate();
         }
     }
 
